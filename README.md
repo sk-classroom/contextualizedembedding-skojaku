@@ -2,7 +2,7 @@
 
 # Task
 
-1. Complete the notebooks "assignments/assignment_01.ipynb" and "assignments/assignment_02.ipynb".
+1. Complete the notebooks "assignments/assignment_01.ipynb".
 2. Generate the files as instructed in the notebooks
 3. Submit the files by git add & git commit & git push the files.
 
