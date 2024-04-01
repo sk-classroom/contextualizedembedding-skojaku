@@ -36,7 +36,6 @@ git merge upstream/main
 
 4. When merging the changes, my code conflicts with the changes from the instructor. How can I resolve the conflicts?
 
-
 To resolve conflicts using the command line options `--theirs` and `--ours` with `git checkout`, follow these steps:
 
 - To keep the changes from the current branch (the one you are merging into), use:
