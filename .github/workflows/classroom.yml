@@ -20,12 +20,22 @@ jobs:
       with:
         test-name: Contextual Embedding test
         setup-command: pip install -r requirements-test.txt
-        command: python -m unittest tests/test.py
+        command: python tests/test.py TestContextualEmbedding.test_contextual_embedding
+        timeout: 10
+        max-score: 10
+    - name: Non Contextual Embedding
+      id: non-contextual-embedding
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: Non Contextual Embedding
+        setup-command: ''
+        command: python tests/test.py TestContextualEmbedding.test_non_contextual_embedding
         timeout: 10
         max-score: 10
     - name: Autograding Reporter
       uses: education/autograding-grading-reporter@v1
       env:
         CONTEXTUAL-EMBEDDING-TEST_RESULTS: "${{steps.contextual-embedding-test.outputs.result}}"
+        NON-CONTEXTUAL-EMBEDDING_RESULTS: "${{steps.non-contextual-embedding.outputs.result}}"
       with:
-        runners: contextual-embedding-test
+        runners: contextual-embedding-test,non-contextual-embedding
