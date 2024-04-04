@@ -19,7 +19,7 @@ jobs:
       uses: education/autograding-command-grader@v1
       with:
         test-name: Contextual Embedding test
-        setup-command: pip install -r requirements.txt
+        setup-command: pip install -r requirements-test.txt
         command: python -m unittest test/test.py
         timeout: 10
         max-score: 10
